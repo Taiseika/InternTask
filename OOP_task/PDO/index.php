@@ -23,7 +23,7 @@ class User
 }
 
 $users = User::showUsers();
-while ($row = $users->fetch(PDO::FETCH_ASSOC)) {
+while ($row = $users->fetch()) {
     echo 'Имя - '.$row['name'].' Id пользователя = '.$row['id']. '.<br>';
     echo 'Ваш email - '.$row['email'].'<br>'.'Ваш пароль - '.$row['pass'].'<br><br>';
 }
